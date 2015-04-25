@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+  {% if error %}<div class="alert alert-danger"><p>{{ message }}</p></div>{% endif %}
+    <form  method="post" >
+      <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}" />
+      <div id="div_id_login_id" class="form-group">
+        <label for="id_login_id" class="control-label">DMM登录ID<span class="asteriskField">*</span></label>
+        <div class="controls "><input class="emailinput form-control" id="id_login_id" maxlength="30" name="login_id" type="email" /></div>
+      </div>
+      <div id="div_id_password" class="form-group">
+        <label for="id_password" class="control-label">DMM登录密码<span class="asteriskField">*</span></label>
+        <div class="controls "><input class="textinput textInput form-control" id="id_password" maxlength="30" name="password" type="password" /></div>
+      </div>
+      <div class="form-actions"><input type="submit" name="submit" value="登录游戏" class="btn btn-primary" id="submit-id-submit"></div>
+    </form>
+{% endblock %}
