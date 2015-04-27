@@ -26,10 +26,10 @@ def generate_csrf_token():
 
 
 app.jinja_env.globals['csrf_token'] = generate_csrf_token
-app.secret_key = os.environ.get('KCC_KEY', "89twejd$f8w598t823yt%732ft9w/efghqp")
+app.secret_key = os.environ.get('KCC_KEY', '89twejd$f8w598t823yt%732ft9w/efghqp')
 app.debug = bool(os.environ.get('KCC_DEBUG', False))
 
-@app.route('/connector/', methods=['GET', 'POST'])
+@app.route(os.environ.get('KCC_PATH', '/connector/'), methods=['GET', 'POST'])
 def index():
     if request.method == 'GET':
         return render_template('form.html', error=False)
