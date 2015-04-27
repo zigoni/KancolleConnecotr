@@ -22,9 +22,14 @@
   <div id="header" class="header">
     <nav>
       <ul class="nav nav-pills pull-right">
-        <li role="presentation"><a href="/">主页</a></li>
-        <li role="presentation"><a href="http://bbs.kancolle.tv/">舰娘论坛</a></li>
-        <li role="presentation" class="active"><a href="/connector/">登录器</a></li>
+        <li role="presentation" class="active"><a href="/">主页</a></li>
+        <li role="presentation"><a href="http://bbs.kancolle.tv/"><span style="color: red;"><strong>舰娘论坛</strong></span></a></li>
+        <li role="presentation"><a class="dropdown-toggle" data-toggle="dropdown">登录器 <span class="caret"></span></a>
+          <ul class="dropdown-menu dropdown-menu-right small-width" role="menu">
+            <li><a href="/connector1/">登录服务器1</a></li>
+            <li><a href="/connector2/">登录服务器2</a></li>
+          </ul>
+        </li>
         <li role="presentation"><a href="/doujin/">同人志</a></li>
         <li role="presentation"><a href="/donate/">捐助</a></li>
       </ul>
